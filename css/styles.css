@@ -1,62 +1,177 @@
-/* configuracion basica de un archio css */
-/* 1.tipografias
-   2.iconos  
-   3.estilos generales
-   4.variables 
-   5.desktop
-   6. tablet
-   7smartphone*/
+/* configuracion basica de un archivo css */
+/* 1.TIPOGRAFIAS */
 
-
-   /* 1.tipografias */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 2.ICONOS */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
-@import url('@fortawesome/fontawesome-free/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
 
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Montserrat", sans-serif;
+/* 3.2 ESTILOS GENERALES titulos */
+h1,h2,h3,h4,h5,h6{
+  font-family: "Montserrat", sans-serif;
 }
-p,a,button,li,label,input,select,textarea, span{
-     font-family: "Raleway", sans-serif;
+/* TEXTOS */
+p,a,button,li,label,input,select,textarea,span{
+    font-family: "Raleway", sans-serif;
 }
-
+/* 3.VARIABLES */
 :root{
     --primary-color: #e58411;
-    --gray-color:#f7f7f7;
-    --white-color:#fff;
+    --gray-color: #f7f7f7;
+    --white-color: #fff;
     --dark-color:#1e1e1e;
-    --fs-title1:80px;
-    --fs-title2:42px;
-    --fs-title3:24px;
-    --fs-title4:18px;
-    --fs-text:16px;
+
+    
+    --fs-title1: 80px;
+    --fs-title2: 42px;
+    --fs-title3: 24px;
+    --fs-title4: 18px;
+    --fs-text: 16px;
+
 
 }
 
-/* 5.DESKTOP */
+
+/* 4. DESKTOP */
 
 header{
     width: 100%;
     position: relative;
-    height: 100vh;
-    background: url("../img/Rectangle\ 1441.png");
+    height: 170vh;
+    background: url("../img/Rectangle 1441.png");
     background-size: cover;
     /* background-position: center; */
     background-position-x:center ;
-    background-position-y: top;
+    background-position-y:bottom ;
+    padding-top: 40px;
+}
+.bg-transparent{
+    background-color: transparent;
+}
+
+header nav .logo{
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 28px;
+    transition: .5s;
+}
+
+header nav .logo:hover{
+    color: var(--white-color);
+    transform: scale(1.2);
+}
+
+#navbarNav li a{
+    color: var(--white-color);
+    font-size: var(--fs-text);
+    margin: 0 15px;
+    padding: 10px;
+    border-bottom: 1px solid transparent;
+    transition: .5s;
+
+}
+#navbarNav li a:hover{
+    border-bottom: 1px solid var(--primary-color);
+}
+header .bag-buttom{
+    background: transparent;
+    border: none;
+    color:var(--white-color);
+    font-size: 25px;
+    position: relative;
+
+}
+header .bag-buttom .counter-products{
+    width: 26px;
+    height: 26px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    font-size: var(--fs-text);
+    border-radius: 50%;
+    position: absolute;
+    right: -10px;
+    bottom: 0px;
 
 }
 
-/* 5.ESTILOS RESPONSIVE  TABLET*/
+#hero{
+    width: 100%;
+    text-align: center;
+    padding: 90px 200px;
+
+}
+
+#hero h2{
+    font-size: var(--fs-title1);
+    color: var(--white-color);
+    font-weight: 700;
+
+}
+
+#hero p{
+    color: var(--white-color);
+    font-size: var(--fs-title3);
+    padding: 40px 150px;
+
+}
+
+#hero form{
+    width: 400px;
+    position: relative;
+    margin: 0 auto;
+}
+
+#hero form input{
+    border-radius: 40px;
+    padding: 15px 44px 15px 20px;
+    width: 370px;
+    font-size: var(--fs-title4);
+    border: 2px solid #fff;
+    background: #ffffff4b;
+    color: var(--white-color);
+    outline: none;
+
+}
+#hero form input::placeholder {
+  color: var(--white-color); 
+}
+#hero form button{
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    color: var(--white-color);
+    position: absolute;
+    right: 6%;
+    top: 15%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 5.TABLET */
 @media screen and (min-width: 768px) and (max-width: 1080px){
 
 }
 
-/* 6.ESTILOS RESPONSIVE  SMARTPHONE*/
+
+/* 6.SMARTPHONE */
 @media screen and (min-width: 320px) and (max-width: 767px){
 
 }
-
-
